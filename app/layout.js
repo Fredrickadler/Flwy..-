@@ -1,15 +1,13 @@
-import '../styles/globals.css';
+import "./globals.css";
+import dynamic from "next/dynamic";
 
-export const metadata = {
-  title: 'Farcaster Mini App',
-  description: 'Follow-orders mini app — collect USDC tips in pool',
-};
+const WagmiProvider = dynamic(() => import("~/components/providers/WagmiProvider"), { ssr: false });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <WagmiProvider>{children}</WagmiProvider>
       </body>
     </html>
   );
