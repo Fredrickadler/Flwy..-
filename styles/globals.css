@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 40px 20px 20px; /* فاصله بیشتر از بالا */
 }
 
 .logo {
@@ -97,36 +97,34 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0;
   background: none;
-  box-shadow: none;
   border: none;
 }
-
 .order-title {
   font-size: 18px;
   font-weight: 700;
+  padding: 0 12px;
 }
-
 .order-sub {
   color: #ccc;
   font-size: 14px;
   line-height: 1.5;
+  padding: 0 12px;
 }
 
+/* Follow button کوچک */
 .follow-btn {
   background: var(--primary);
-  color: white;
   border: none;
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
+  padding: 8px;
   cursor: pointer;
-  font-weight: 600;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 18px rgba(138,90,255,0.2);
+  box-shadow: 0 4px 14px rgba(138,90,255,0.2);
   transition: transform .18s ease, box-shadow .18s ease;
+  margin-left: 12px; /* فاصله از سمت چپ */
 }
 .follow-btn:hover {
   transform: translateY(-2px);
@@ -140,46 +138,41 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  background: rgba(18, 18, 18, 0.9);
-  border-radius: 14px;
-  padding: 6px;
   gap: 6px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  z-index: 50;
 }
-
 .nav-btn {
-  background: transparent;
   border: none;
-  color: #bbb;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 10px;
+  background: rgba(18,18,18,0.9);
+  border-radius: 14px;
   padding: 8px 14px;
   display: flex;
   align-items: center;
   gap: 6px;
-  cursor: pointer;
+  color: #bbb;
+  font-weight: 600;
+  font-size: 14px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
-
 .nav-btn svg {
   width: 18px;
   height: 18px;
 }
-
 .nav-btn.active {
   color: var(--primary);
   background: rgba(138, 90, 255, 0.08);
 }
 
-/* حالت جمع شده (دایره‌ای فقط آیکون) */
+/* حالت جمع شده (دایره‌ای فقط آیکون، دکمه دیگر محو) */
 .nav-btn.compact {
-  padding: 10px;
   border-radius: 50%;
-  color: #fff;
-  background: rgba(138, 90, 255, 0.2);
+  padding: 10px;
 }
 .nav-btn.compact span {
+  display: none;
+}
+.nav-btn.hidden {
   display: none;
 }
 
@@ -187,14 +180,13 @@ body {
 .particles {
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: -1;
+  pointer-events: none;
 }
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(138, 90, 255, 0.7);
-  opacity: 0;
+  background: rgba(138,90,255,0.6);
   animation: float linear infinite;
 }
 @keyframes float {
