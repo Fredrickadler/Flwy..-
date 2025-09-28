@@ -1,24 +1,19 @@
-export default function OrderCard({ accountName = 'StellarAlice', accountId = '@stellar.alice', onFollow }) {
+export default function OrderCard({ accountName = "StellarAlice", accountId = "@stellar.alice", onFollow }) {
   return (
     <div className="order-card">
-      <div className="order-avatar">
-        <img src="https://your-logo-link.com" alt="avatar" />
+      <div className="order-title">{accountName}</div>
+      <div className="order-sub">
+        Follow this account ({accountId}). After you follow, the system will automatically add a coin to your balance.
       </div>
 
-      <div className="order-content">
-        <div className="order-title">{accountName}</div>
-        <div className="order-sub">
-          Follow this account ({accountId}). After you follow, the system will automatically add a coin to your balance.
-        </div>
-
-        <div style={{ marginTop: 12 }}>
-          <button className="follow-btn" onClick={() => onFollow && onFollow(accountId)}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="white" style={{ width:20, height:20 }}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.118a7.5 7.5 0 0115 0M18 9.75h3m-1.5-1.5v3" />
-            </svg>
-          </button>
-        </div>
-      </div>
+      <button className="follow-btn" onClick={() => onFollow && onFollow(accountId)}>
+        {/* آیکون فالو (fa-user) */}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white" style={{ width:20, height:20 }}>
+          <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32H128.2c-70.7 0-128 
+          57.3-128 128 0 17.7 14.3 32 32 32h352c17.7 0 32-14.3 
+          32-32 0-70.7-57.3-128-128-128z"/>
+        </svg>
+      </button>
     </div>
   );
 }
