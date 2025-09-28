@@ -1,9 +1,8 @@
-export default function OrderCard({ accountName = 'star_owner', accountId = '@star_owner', onFollow }) {
+export default function OrderCard({ accountName = 'StellarAlice', accountId = '@stellar.alice', onFollow }) {
   return (
     <div className="order-card">
       <div className="order-avatar">
-        {/* استفاده از SVG / تصویر کوچک به جای ایموجی کیبوردی */}
-        <img src="/avatar-svgrepo.svg" alt="avatar" />
+        <img src="https://your-logo-link.com" alt="avatar" />
       </div>
 
       <div className="order-content">
@@ -14,16 +13,11 @@ export default function OrderCard({ accountName = 'star_owner', accountId = '@st
 
         <div style={{ marginTop: 12 }}>
           <button className="follow-btn" onClick={() => onFollow && onFollow(accountId)}>
-            <span style={{fontSize:16}}>✨</span>
-            <span style={{marginLeft:6}}>Follow</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="white" style={{ width:20, height:20 }}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.118a7.5 7.5 0 0115 0M18 9.75h3m-1.5-1.5v3" />
+            </svg>
           </button>
         </div>
-      </div>
-
-      <div className="order-side">
-        <div className="pill">Pool: 12.34 USDC</div>
-        <div className="pill">Followers: 1,240</div>
-        <div className="pill">Payout: 0.01 USDC</div>
       </div>
     </div>
   );
