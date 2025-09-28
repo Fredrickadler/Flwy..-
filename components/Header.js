@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="header container" style={{ position: "relative", zIndex: 20 }}>
       <div className="logo">
-        <img src="https://i.postimg.cc/YqQ3cLBw/7579674-A-B3-EE-48-DD-9-BCB-CE9-C17-CE6869.png" alt="Flwy logo" style={{ width:36, height:36, borderRadius:8 }} />
+        <img src="https://i.postimg.cc/ncLHgBD6/17-A4-B2-F5-261-B-47-E5-9177-3-B2381-C51-D22.png" alt="Flwy logo" style={{ width:36, height:36, borderRadius:8 }} />
         <div>
           <div style={{ fontSize:14, fontWeight:700 }}>Flwy…!</div>
           <div style={{ fontSize:12, color:"#9B9B9B" }}>Mini App</div>
