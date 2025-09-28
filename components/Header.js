@@ -1,21 +1,26 @@
 import { useEffect, useState } from 'react';
 import StarBackground from './StarBackground';
 
-export default function Header({ onConnect }) {
+export default function Header() {
   return (
-    <header className="header container" style={{ position: 'relative', zIndex: 20 }}>
+    <header className="header container" style={{ position: "relative", zIndex: 20 }}>
       <div className="logo">
-        {/* لوگو: لینک رو خودت میدی */}
         <img src="https://your-logo-link.com" alt="Flwy logo" style={{ width:36, height:36, borderRadius:8 }} />
         <div>
-          <div style={{fontSize:14, fontWeight:700}}>Flwy…!</div>
-          <div style={{fontSize:12, color:'#9B9B9B'}}>Mini App</div>
+          <div style={{ fontSize:14, fontWeight:700 }}>Flwy…!</div>
+          <div style={{ fontSize:12, color:"#9B9B9B" }}>Mini App</div>
         </div>
       </div>
 
       <button className="wallet-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="white" style={{ width:18, height:18 }}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 12H7.5M3 7.5A2.25 2.25 0 015.25 5.25h13.5A2.25 2.25 0 0121 7.5v9a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 16.5v-9z" />
+        {/* Wallet Icon fa-wallet */}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white" style={{ width:20, height:20 }}>
+          <path d="M448 96H80c-26.5 0-48 21.5-48 48v224c0 
+          26.5 21.5 48 48 48h352c8.8 0 16-7.2 
+          16-16v-80h-48c-17.7 0-32-14.3-32-32s14.3-32 
+          32-32h48V144c0-8.8-7.2-16-16-16zm-64 
+          208c0 8.8-7.2 16-16 16s-16-7.2-16-16 
+          7.2-16 16-16 16 7.2 16 16z"/>
         </svg>
         Connect Wallet
       </button>
