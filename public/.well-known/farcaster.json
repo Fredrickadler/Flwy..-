@@ -1,16 +1,17 @@
 {
   "accountAssociation": {
-    "header": "",
+    "header": "لeyJmaWQiOjkyOTkxMCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDQ3ZTg5Q0YzMDBFNzI5MGNFMEE2Mjc2NzAwQTU1NjM5YmZCYkE3MzUifQ",
     "payload": "",
     "signature": ""
   },
   "frame": {
-    "version": "1",
-    "name": "Flwy",
-    "iconUrl": "https://flwy-one.vercel.app/icon.png",
-    "homeUrl": "https://flwy-one.vercel.app",
-    "splashImageUrl": "https://flwy-one.vercel.app/splash.png",
-    "splashBackgroundColor": "#000000",
-    "webhookUrl": "https://flwy-one.vercel.app/api/webhook"
-  }
-} 
+  "version": "1",
+  "name": "Fwly..!",
+  "iconUrl": "https://flwy-one.vercel.app/icon.png",
+  "homeUrl": "https://flwy-one.vercel.app",
+  "imageUrl": "https://flwy-one.vercel.app/image.png",
+  "buttonTitle": "Check this out",
+  "splashImageUrl": "https://flwy-one.vercel.app/splash.png",
+  "splashBackgroundColor": "#eeccff",
+  "webhookUrl": "https://flwy-one.vercel.app/api/webhook"
+}
