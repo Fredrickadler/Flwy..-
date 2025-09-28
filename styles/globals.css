@@ -80,17 +80,15 @@ body{
 
 /* Order card */
 .order-card {
-  width:100%;
-  max-width: 760px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  width: 100%;
+  max-width: 720px; /* کوچیک‌تر شد */
+  background: rgba(255,255,255,0.04); /* تیره‌تر */
   border-radius: 14px;
   padding: 18px;
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
+  margin: 0 auto; /* وسط‌چین */
+  display: flex;
+  gap: 18px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.03);
 }
 
 /* avatar / emoji area */
