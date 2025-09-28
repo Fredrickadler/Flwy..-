@@ -1,42 +1,24 @@
 import { useEffect } from 'react';
 
-export default function StarBackground({ count = 80 }) {
+export default function StarBackground({ count = 30 }) {
   useEffect(() => {
     const container = document.createElement('div');
     container.className = 'particles';
-    container.id = 'particles-root';
     document.body.appendChild(container);
 
-    const particles = [];
     for (let i = 0; i < count; i++) {
       const p = document.createElement('div');
       p.className = 'particle';
-      resetParticle(p);
-      container.appendChild(p);
-      particles.push(p);
-    }
-
-    function resetParticle(p) {
-      const size = Math.random() * 3 + 1;
+      const size = Math.random() * 4 + 3; // بزرگ‌تر
       p.style.width = `${size}px`;
       p.style.height = `${size}px`;
       p.style.left = `${Math.random() * 100}vw`;
-      p.style.top = `${Math.random() * 120}vh`;
-      p.style.animationDuration = `${8 + Math.random() * 12}s`;
-      p.style.opacity = String(0);
+      p.style.top = `${Math.random() * 100}vh`;
+      p.style.animationDuration = `${18 + Math.random() * 10}s`; // کندتر
+      container.appendChild(p);
     }
 
-    // reposition periodically
-    const t = setInterval(() => {
-      particles.forEach((p) => {
-        resetParticle(p);
-      });
-    }, 2500);
-
-    return () => {
-      clearInterval(t);
-      container.remove();
-    };
+    return () => container.remove();
   }, [count]);
 
   return null;
