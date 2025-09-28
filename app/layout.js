@@ -4,7 +4,7 @@ export const metadata = {
   title: "Flwy Frame",
   description: "A Farcaster Frame App",
   icons: {
-    icon: "/icon.png", // باید فایل icon.png رو توی public بذاری
+    icon: "/icon.png",
   },
 };
 
@@ -12,19 +12,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* متای لازم برای Farcaster Frame */}
         <meta
           name="fc:frame"
           content='{
             "version":"next",
-            "imageUrl":"https://flwy.vercel.app/preview.png",
+            "imageUrl":"https://flwy-one.vercel.app/preview.png",
             "button":{
               "title":"Open Flwy",
               "action":{
                 "type":"launch_frame",
                 "name":"Flwy",
-                "url":"https://flwy.vercel.app",
-                "splashImageUrl":"https://flwy.vercel.app/splash.png",
+                "url":"https://flwy-one.vercel.app",
+                "splashImageUrl":"https://flwy-one.vercel.app/splash.png",
                 "splashBackgroundColor":"#000000"
               }
             }
