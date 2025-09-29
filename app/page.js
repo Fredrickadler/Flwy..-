@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import sdk, { type FrameContext } from "@farcaster/frame-sdk";
+import sdk from "@farcaster/frame-sdk";
 
 export default function Home() {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
-  const [context, setContext] = useState<FrameContext>();
+  const [context, setContext] = useState(null);
 
   useEffect(() => {
     const load = async () => {
@@ -20,7 +20,11 @@ export default function Home() {
   }, [isSDKLoaded]);
 
   if (!isSDKLoaded) {
-    return <div className="flex items-center justify-center h-screen">Loading...</div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        Loading...
+      </div>
+    );
   }
 
   return (
@@ -35,13 +39,17 @@ export default function Home() {
       <main className="main">
         <div className="order-card">
           <h1 className="order-title">Welcome to Flwy Frame</h1>
-          <p className="order-sub">Your Farcaster mini-app with custom graphics ✨</p>
+          <p className="order-sub">
+            Your Farcaster mini-app with custom graphics ✨
+          </p>
         </div>
 
         {context && (
           <div className="order-card">
             <h2 className="order-title">Frame Context</h2>
-            <pre className="order-sub">{JSON.stringify(context, null, 2)}</pre>
+            <pre className="order-sub">
+              {JSON.stringify(context, null, 2)}
+            </pre>
           </div>
         )}
       </main>
@@ -55,8 +63,14 @@ export default function Home() {
 
       {/* Particles background */}
       <div className="particles">
-        <div className="particle" style={{ width: "8px", height: "8px", top: "50%", left: "20%" }}></div>
-        <div className="particle" style={{ width: "12px", height: "12px", top: "70%", left: "60%" }}></div>
+        <div
+          className="particle"
+          style={{ width: "8px", height: "8px", top: "50%", left: "20%" }}
+        ></div>
+        <div
+          className="particle"
+          style={{ width: "12px", height: "12px", top: "70%", left: "60%" }}
+        ></div>
       </div>
     </div>
   );
