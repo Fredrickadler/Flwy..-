@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #8A5AFF;
+  --primary-dark: #6E3AFF;
+  --bg-900: #0F0F0F;
+  --muted: #A0A0A0;
+  --white: #FFFFFF;
+}
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
 body {
-  @apply bg-black text-white;
+  background: var(--bg-900);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
