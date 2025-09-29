@@ -23,9 +23,7 @@ html, body, #__next {
   height: 100%;
 }
 
+/* test css */
 body {
-  background: var(--bg-900);
-  color: var(--white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: red !important;
 }
