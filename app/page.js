@@ -54,13 +54,6 @@ export default function Home() {
         )}
       </main>
 
-      {/* Bottom navigation */}
-      <nav className="bottom-nav">
-        <button className="nav-btn active">🏠 Home</button>
-        <button className="nav-btn">⭐ Explore</button>
-        <button className="nav-btn">⚙️ Settings</button>
-      </nav>
-
       {/* Particles background */}
       <div className="particles">
         <div
