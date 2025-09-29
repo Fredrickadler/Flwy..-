@@ -1,21 +1,8 @@
 export default function Header() {
   return (
-    <header className="header container" style={{ position: "relative", zIndex: 20 }}>
-      <div className="logo">
-        <img src="https://i.postimg.cc/sDC2BkF1/EEE329-E2-AFE6-4655-A643-C0171-EA8-F3-F0.png" alt="Flwy logo" style={{ width:36, height:36, borderRadius:8 }} />
-        <div>
-          <div style={{ fontSize:14, fontWeight:700 }}>Flwy…!</div>
-          <div style={{ fontSize:12, color:"#9B9B9B" }}>Mini App</div>
-        </div>
-      </div>
-
-      <button className="wallet-btn">
-        {/* Wallet Icon fa-wallet */}
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" style={{ width:20, height:20 }}>
-          <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 336c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z"/>
-        </svg>
-        Connect Wallet
-      </button>
+    <header className="header">
+      <div className="logo">🚀 Flwy</div>
+      <button className="wallet-btn">Connect Wallet</button>
     </header>
   );
 }
