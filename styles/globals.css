@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px 20px; /* فاصله بیشتر از بالا */
+  padding: 40px 20px 20px;
 }
 
 .logo {
@@ -90,7 +90,7 @@ body {
   gap: 28px;
 }
 
-/* Order content (بدون مستطیل) */
+/* Order content */
 .order-card {
   max-width: 720px;
   margin: 0 auto;
@@ -112,7 +112,7 @@ body {
   padding: 0 12px;
 }
 
-/* Follow button کوچک */
+/* Follow button */
 .follow-btn {
   background: var(--primary);
   border: none;
@@ -124,7 +124,7 @@ body {
   justify-content: center;
   box-shadow: 0 4px 14px rgba(138,90,255,0.2);
   transition: transform .18s ease, box-shadow .18s ease;
-  margin-left: 12px; /* فاصله از سمت چپ */
+  margin-left: 12px;
 }
 .follow-btn:hover {
   transform: translateY(-2px);
@@ -164,7 +164,7 @@ body {
   background: rgba(138, 90, 255, 0.08);
 }
 
-/* حالت جمع شده (دایره‌ای فقط آیکون، دکمه دیگر محو) */
+/* Compact nav */
 .nav-btn.compact {
   border-radius: 50%;
   padding: 10px;
