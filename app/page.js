@@ -24,16 +24,33 @@ export default function Home() {
   }
 
   return (
-    <main className="main">
-      <h1 className="text-3xl font-bold mb-4">🚀 Flwy Frame</h1>
-      <p className="mb-6">Welcome to your Farcaster mini-app!</p>
+    <div>
+      {/* Header */}
+      <header className="header">
+        <div className="logo">🚀 Flwy</div>
+        <button className="wallet-btn">Connect Wallet</button>
+      </header>
 
-      {context && (
+      {/* Main */}
+      <main className="main">
         <div className="order-card">
-          <h2 className="order-title">Frame Context</h2>
-          <pre className="order-sub">{JSON.stringify(context, null, 2)}</pre>
+          <h1 className="order-title">Welcome to Flwy Frame</h1>
+          <p className="order-sub">Your Farcaster mini-app with custom graphics ✨</p>
         </div>
-      )}
-    </main>
+      </main>
+
+      {/* Bottom Navigation */}
+      <nav className="bottom-nav">
+        <button className="nav-btn active">🏠 Home</button>
+        <button className="nav-btn">⭐ Explore</button>
+        <button className="nav-btn">⚙️ Settings</button>
+      </nav>
+
+      {/* Particles */}
+      <div className="particles">
+        <div className="particle" style={{ width: "8px", height: "8px", top: "50%", left: "20%" }}></div>
+        <div className="particle" style={{ width: "12px", height: "12px", top: "70%", left: "60%" }}></div>
+      </div>
+    </div>
   );
 }
